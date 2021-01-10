@@ -7,8 +7,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of cropDemand is to make a crop water balance based on Thornwaite Matter (1955), but with possibility to change the available water capacity value according to different crops.  for any region of Brazil. For this
-cropZoning uses the Terraclimate dataset (http://www.climatologylab.org/terraclimate.html) calibrated with the automatic weather stations of National Meteorological Institute of Brazil (INMET). 
+The goal of cropDemand is to make a crop water balance based on Thornwaite Matter (1955), but with possibility to change the available water capacity value according to different crops, for any region of Brazil. The cropDemand package uses the Terraclimate dataset (http://www.climatologylab.org/terraclimate.html) calibrated with the automatic weather stations of National Meteorological Institute of Brazil (INMET).
 
 
 ## Installation
