@@ -26,8 +26,8 @@ This is a basic example which shows you how to run the cropDemand package:
 ``` r
 ## basic example code
 
-#devtools::install_github("FilgueirasR/cropZoning")
-library(cropZoning)
+#devtools::install_github("FilgueirasR/cropDemand")
+library(cropDemand)
 library(raster)
 
 see_brazil_states()
