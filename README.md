@@ -32,8 +32,8 @@ library(raster)
 
 see_brazil_states()
 
-image_ppt<-loadROI(variable = "ppt", region = "brazil", sub_region = 10) # sub_region = Rio Grande do Norte
-image_etp<-loadROI(variable = "etp", region = "brazil", sub_region = 10) # sub_region = Rio Grande do Norte
+image_ppt<-loadROI(variable = "ppt", region = "brazil", sub_region = 10) # sub_region = Maranhão
+image_etp<-loadROI(variable = "etp", region = "brazil", sub_region = 10) # sub_region = Maranhão
 
 start_date<-c('2000-01-01')
 end_date<-c('2017-12-01')
