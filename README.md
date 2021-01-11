@@ -12,7 +12,7 @@ The goal of cropDemand is to make a crop water balance based on Thornwaite Matte
 
 ## Installation
 
-To install the last version of cropZoning package follow this steps:
+To install the last version of cropDemand package follow this steps:
 
 ``` r
 devtools::install_github("FilgueirasR/cropDemand")
