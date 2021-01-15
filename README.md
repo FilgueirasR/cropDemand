@@ -1,7 +1,7 @@
 # cropDemand
 
 <div class="fluid-row" id="header">
-    <img src='/www/CropDemand_figure.png' height='150' width='auto' align='right'>
+    <img src='https://lh4.googleusercontent.com/x9jauzcCCVcS_E_KJt07oynPnHGDw8_mWATp_Ph4xBlSDaHYXpoacHkwHxo-Rvx4JoTeJN7v_vo3a7cE-XiLxiJHrsht_rUpAjnIO8cI3sjbwIAH1H8c=w1280' height='150' width='auto' align='right'>
 
 
 <!-- badges: start -->
