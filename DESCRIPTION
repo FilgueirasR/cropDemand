@@ -1,7 +1,7 @@
 Package: cropDemand
 Type: Package
 Title: Spatial Crop Water Demand for Brazil
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: c(person(given = "Roberto",
                     family = "Filgueiras",
                     role = c("aut","cre"),
@@ -35,4 +35,3 @@ Imports:
     ncdf4
 BugReports: https://github.com/FilgueirasR/cropDemand/issues
 RoxygenNote: 7.1.1
-
