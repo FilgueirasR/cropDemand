@@ -2,7 +2,7 @@
 % Please edit documentation in R/see_brazil_states.R
 \name{see_brazil_states}
 \alias{see_brazil_states}
-\title{Function to see the Brazilian states available in cropZoning package and how we can use it in the loadROI function}
+\title{Function to see the Brazilian states available to use in download.terraclimate and loadROI function}
 \usage{
 see_brazil_states()
 }

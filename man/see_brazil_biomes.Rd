@@ -2,12 +2,12 @@
 % Please edit documentation in R/see_brazil_biomes.R
 \name{see_brazil_biomes}
 \alias{see_brazil_biomes}
-\title{Function to see the Brazilian biomes available in cropZoning package and how we can use it in the loadROI function}
+\title{Function to see the Brazilian biomes available tp use in download.terraclimate and loadROI function}
 \usage{
 see_brazil_biomes()
 }
 \value{
-The biomes information available to run the cropZoning package.
+The biomes information available to run the cropDemand package.
 }
 \description{
 This fuction will show the biomes available in the package and how we can call each biome polygon.

@@ -2,12 +2,12 @@
 % Please edit documentation in R/monthly_stack.R
 \name{monthly_stack}
 \alias{monthly_stack}
-\title{Function to calculate the mean monthly rainfall/evapotranspiration to generate the crop water demanding}
+\title{Function to calculate the mean monthly rainfall/reference evapotranspiration to generate the crop water demand}
 \usage{
 monthly_stack(stack, start_date, end_date)
 }
 \arguments{
-\item{stack}{Stack of mean rainfall/evapotranspiration Rasterstack}
+\item{stack}{Stack of mean rainfall/reference evapotranspiration Rasterstack}
 
 \item{start_date}{Date that start the investigation, should be in the following format (2000-01-01 /Year-Month-Day)}
 
@@ -17,7 +17,7 @@ monthly_stack(stack, start_date, end_date)
 Returns a stack with a monthly mean air temperature from a period of time
 }
 \description{
-This fucntion will calculate the mean monthly air temperature based on the period of time selected (start_date and end_date).
+This function will calculate the mean monthly air temperature based on the period of time selected (start_date and end_date).
 }
 \examples{
 \dontrun{

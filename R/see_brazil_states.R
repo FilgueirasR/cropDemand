@@ -1,4 +1,4 @@
-#' Function to see the Brazilian states available in cropZoning package and how we can use it in the loadROI function
+#' Function to see the Brazilian states available to use in download.terraclimate and loadROI function
 #'
 #' @description This function will show the Brazilian state available in the package and how we can call each state polygon.
 #' @examples

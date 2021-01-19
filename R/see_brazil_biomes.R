@@ -1,11 +1,11 @@
-#' Function to see the Brazilian biomes available in cropZoning package and how we can use it in the loadROI function
+#' Function to see the Brazilian biomes available tp use in download.terraclimate and loadROI function
 #'
 #' @description This fuction will show the biomes available in the package and how we can call each biome polygon.
 #' @examples
 #' \dontrun{
 #' see_brazil_biomes()
 #' }
-#' @return The biomes information available to run the cropZoning package.
+#' @return The biomes information available to run the cropDemand package.
 #' @export
 
 
