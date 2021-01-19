@@ -23,6 +23,7 @@ This function will calculate the hidric balance parameters based in the availabl
 }
 \examples{
 \dontrun{
-cwd<- waterDemand(out_dir = "G:/My computer/test/CropWaterDemand", ppt_stack = rainfall_image, etp_stack = etp_image, AWC = 100)
+cwd<- waterDemand(out_dir = "G:/My computer/test/CropWaterDemand",
+                  ppt_stack = rainfall_image, etp_stack = etp_image, AWC = 100)
 }
 }

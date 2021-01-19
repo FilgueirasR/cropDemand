@@ -16,6 +16,8 @@
 
 plot_AWC<-function(AWC_stack){
 
+  Months<-AWC<-y<-x<-NULL
+
 names(AWC_stack)<-c( "January", "February", "March", "April", "May", "June",
                       "July", "August", "September", "October", "November", "December")
   df <- as.data.frame(rasterToPoints(AWC_stack))
@@ -31,8 +33,8 @@ names(AWC_stack)<-c( "January", "February", "March", "April", "May", "June",
   legend_title <- "AWC (%)"
   max<-100
   min<-0
-  ggplot(data=df, aes(y = df$y, x = df$x)) +
-    geom_raster(aes(fill= df$AWC))+
+  ggplot(data=df, aes(y = y, x = x)) +
+    geom_raster(aes(fill= AWC))+
     coord_fixed(xlim = c(extent(AWC_stack)[1], extent(AWC_stack)[2]))+
     scale_fill_gradient(legend_title, low ="yellow", high = "blue", na.value = "transparent", limits=c(min, max))+
     theme(axis.title.x = element_blank(),
@@ -41,7 +43,7 @@ names(AWC_stack)<-c( "January", "February", "March", "April", "May", "June",
           axis.text.y = element_blank(),
           axis.ticks = element_blank(),
           legend.position = "right")+
-    facet_wrap(~df$Months)+
+    facet_wrap(~Months)+
     theme(strip.text.x = element_text(size = 12))+
     guides(color = guide_legend(override.aes = list(size=5)))+
     theme(legend.key.size = unit(1, "cm"),

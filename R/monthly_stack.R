@@ -9,7 +9,8 @@
 #' \dontrun{
 #' start_date <- c('2000-01-01')
 #' end_date <- c('2017-12-01')
-#' monthly_rainfall <- monthly_stack(stack = rainfall_stack, start_date = start_date, end_date = end_date)
+#' monthly_rainfall <- monthly_stack(stack = rainfall_stack,
+#'                                   start_date = start_date, end_date = end_date)
 #' }
 #' @export
 #' @return Returns a stack with a monthly mean air temperature from a period of time

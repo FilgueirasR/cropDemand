@@ -11,13 +11,19 @@
 #' #For Brazilian states
 #'
 #' see_brazil_states()
-#' image_etp<-loadROI(variable = "etp", region = "brazil", sub_region = 13) # sub_regions 1:27
-#' image_rainfall<-loadROI(variable = "rainfal", region = "brazil", sub_region = 13)
+#'
+#' image_etp<-loadROI(variable = "etp", region = "brazil",
+#'                     sub_region = 13) # sub_regions 1:27
+#'
+#' image_rainfall<-loadROI(variable = "rainfal",
+#'                         region = "brazil", sub_region = 13)
 #'
 #' #For Brazilian Biomes:
 #'
 #' see_brazil_biomes()
-#' image_tmin<- loadROI(variable = "etp", region = "biomes_brazil", sub_region = 2)# sub regions: 1:6 (biomes)
+#'
+#' image_tmin<- loadROI(variable = "etp", region = "biomes_brazil",
+#'                       sub_region = 2)# sub regions: 1:6 (biomes)
 #'
 #' }
 #' @return Load the tmin (minimum air temperature) or tmax (maximum air temperature) rasterstack

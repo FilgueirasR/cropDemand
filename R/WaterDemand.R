@@ -10,7 +10,8 @@
 #' @importFrom stats na.omit
 #' @examples
 #' \dontrun{
-#' cwd<- waterDemand(out_dir = "G:/My computer/test/CropWaterDemand", ppt_stack = rainfall_image, etp_stack = etp_image, AWC = 100)
+#' cwd<- waterDemand(out_dir = "G:/My computer/test/CropWaterDemand",
+#'                   ppt_stack = rainfall_image, etp_stack = etp_image, AWC = 100)
 #' }
 #' @export
 #' @return Returns multiple stack of output
