@@ -1,4 +1,5 @@
 #' Function to calculate the mean monthly rainfall/reference evapotranspiration to generate the crop water demand
+#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This function will calculate the mean monthly air temperature based on the period of time selected (start_date and end_date).
 #' @param stack Stack of mean rainfall/reference evapotranspiration Rasterstack

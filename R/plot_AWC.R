@@ -1,5 +1,5 @@
 #' Function to plot the percentage of Available Water Capacity (AWC)
-#'
+#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This function will plot the monthly AWC
 #' @import ggplot2

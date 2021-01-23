@@ -2,16 +2,17 @@
 % Please edit documentation in R/calibration_ppt_etp.R
 \name{eto_calibration}
 \alias{eto_calibration}
-\title{Calibration of reference evapotranspiration (eto) of 'TerraClimate'}
+\title{Calibration of reference evapotranspiration (eto) of 'TerraClimate'
+\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
 \usage{
-eto_calibration(slope, intercept, etp_stack)
+eto_calibration(slope, intercept, eto_stack)
 }
 \arguments{
 \item{slope}{the slope of the linear regression (numeric).}
 
 \item{intercept}{the intercept of the linear regression (numeric).}
 
-\item{etp_stack}{stack of eto.}
+\item{eto_stack}{stack of eto.}
 }
 \value{
 Returns a Rasterstack of eto calibrated.
@@ -21,7 +22,7 @@ This function will calibrate the reference evapotranspiration (eto) from TerraCl
 }
 \examples{
 \dontrun{
-etp_cal<- eto_calibration(slope = 0.930073,
-                           intercept = 22.399986, etp_stack = etp);
+eto_cal<- eto_calibration(slope = 0.930073,
+                           intercept = 22.399986, eto_stack = etp);
 }
 }

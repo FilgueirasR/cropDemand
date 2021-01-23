@@ -1,11 +1,12 @@
 #' Function to see the Brazilian states available to use in download.terraclimate and loadROI function
+#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This function will show the Brazilian state available in the package and how we can call each state polygon.
 #' @examples
 #' \dontrun{
 #' see_brazil_states()
 #' }
-#' @return The Brazilian state information available in the package to run the cropZoning package.
+#' @return The Brazilian state information available in the package to run the cropDemand package.
 #' @export
 
 
@@ -16,6 +17,6 @@ see_brazil_states <- function(){
         "Paraiba = 15", "Para = 16", "Pernambuco = 17", "Piaui = 18", "Rio Grande do Norte = 19",
         "Rio Grande do Sul = 20", " Rio de Janeiro = 21", "Rondonia = 22", "Roraima = 23", "Santa Catarina = 24",
         "Sergipe = 25", "Sao Paulo = 26", "Tocantins = 27")
-  print("Use the text format or the corresponding number:")
+  print("Use the corresponding number:")
   return(a)
 }

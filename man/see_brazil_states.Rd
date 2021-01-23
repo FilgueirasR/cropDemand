@@ -2,12 +2,13 @@
 % Please edit documentation in R/see_brazil_states.R
 \name{see_brazil_states}
 \alias{see_brazil_states}
-\title{Function to see the Brazilian states available to use in download.terraclimate and loadROI function}
+\title{Function to see the Brazilian states available to use in download.terraclimate and loadROI function
+\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
 \usage{
 see_brazil_states()
 }
 \value{
-The Brazilian state information available in the package to run the cropZoning package.
+The Brazilian state information available in the package to run the cropDemand package.
 }
 \description{
 This function will show the Brazilian state available in the package and how we can call each state polygon.

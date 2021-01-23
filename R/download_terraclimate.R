@@ -1,8 +1,9 @@
 #' Download of reference evapotranspiration (eto) and rainfall (ppt) from 'TerraClimate'
-#'
+#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This function will download the eto and ppt and will load a rasterstack according to the the region of interest (Region and sub_region).
-#' @param variable variable to download. This function will download the eto or ppt (Rasterstack).
+#' @param dir_out Directory where you want to save the raster images that you are goind to download.
+#' @param variable Variable to download. This function will download the eto or ppt (Rasterstack).
 #' @param region Use the "brazil" shapefile to extract the Rasterstack (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the Rasterstack (variable) for one biome of Brazil.
 #' @param sub_region You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes.
 #' @param years The period in years that the function should download images.
@@ -33,8 +34,8 @@
 #' The images used in this package can be found in the paper: Abatzoglou, J.T., S.Z. Dobrowski, S.A. Parks, K.C. Hegewisch, 2018, Terraclimate, a high-resolution global dataset of monthly climate and climatic water balance from 1958-2015, Scientific Data.
 #' @export
 
-download_terraclimate <- function(variable, years, region, sub_region){
-  tempdir<- tempdir()
+download_terraclimate <- function(dir_out, variable, years, region, sub_region){
+  tempdir<- dir_out
   if(variable == "eto"){variable<-"pet"} else {}
   outdir<- gsub('\\', '/', tempdir, fixed=TRUE)
   if(variable == "ppt"| variable == "pet"){
@@ -53,9 +54,8 @@ download_terraclimate <- function(variable, years, region, sub_region){
     s<-crop(s, area)
     s<-mask(s, area)
 
-    unlink(paste0(normalizePath(tempdir), "/", dir(tempdir)), recursive = TRUE)
+    #unlink(paste0(normalizePath(tempdir), "/", dir(tempdir)), recursive = TRUE)
     return(s)
   } else {message("Please, pay attention. You should download the variable ppt or eto!")}
 }
-
 

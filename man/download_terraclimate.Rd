@@ -2,12 +2,15 @@
 % Please edit documentation in R/download_terraclimate.R
 \name{download_terraclimate}
 \alias{download_terraclimate}
-\title{Download of reference evapotranspiration (eto) and rainfall (ppt) from 'TerraClimate'}
+\title{Download of reference evapotranspiration (eto) and rainfall (ppt) from 'TerraClimate'
+\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
 \usage{
-download_terraclimate(variable, years, region, sub_region)
+download_terraclimate(dir_out, variable, years, region, sub_region)
 }
 \arguments{
-\item{variable}{variable to download. This function will download the eto or ppt (Rasterstack).}
+\item{dir_out}{Directory where you want to save the raster images that you are goind to download.}
+
+\item{variable}{Variable to download. This function will download the eto or ppt (Rasterstack).}
 
 \item{years}{The period in years that the function should download images.}
 

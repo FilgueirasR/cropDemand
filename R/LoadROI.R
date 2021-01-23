@@ -1,4 +1,5 @@
 #' Load image data to do crop water demand
+#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This fuction will load the evapotranspiration and rainfall data for the region of interest (ROI).
 #' @param variable Stack of evapotranspiration or rainfall (Rasterstack).

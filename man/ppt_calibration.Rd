@@ -2,7 +2,8 @@
 % Please edit documentation in R/calibration_ppt_etp.R
 \name{ppt_calibration}
 \alias{ppt_calibration}
-\title{Calibration of rainfall (ppt) of 'TerraClimate'}
+\title{Calibration of rainfall (ppt) of 'TerraClimate'
+\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
 \usage{
 ppt_calibration(slope, intercept, ppt_stack)
 }

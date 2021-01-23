@@ -1,9 +1,23 @@
-#' Function to calculate to generate the  water demand based in available water capacity of the soil
+#' Function to generate the  water demand based in available water capacity of the soil
+#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
-#' @description This function will calculate the hidric balance parameters based in the available water capacity informed (AWC)
+#' @description This function will calculate the water balance parameters based in the available water capacity informed (AWC).
+#' The output water balance parameters for this function are:
+#'
+#'    \enumerate{
+#'      \item ARM - storage;
+#'      \item ALT - alteration;
+#'      \item ETR - actual evapotranspiration;
+#'      \item DEF - deficit;
+#'      \item EXC - excess;
+#'      \item REP - replacement;
+#'      \item RET - withdrawal;
+#'      \item AWC_arm - percentage of storage compared to AWC;
+#' }
+#'
 #' @param out_dir output directory where you want to save the variables
 #' @param ppt_stack Stack of mean rainfall Rasterstack calculated in monthly_stack function
-#' @param etp_stack Stack of mean evapotranspiration Rasterstack calculated in monthly_stack function
+#' @param eto_stack Stack of mean evapotranspiration Rasterstack calculated in monthly_stack function
 #' @param AWC The available water capacity (AWC) that the function will use in the calculations. The AWC value must be chosen according to the crop (root system depth) you want to obtain the water balance.
 #' @import raster
 #' @importFrom dplyr %>%
@@ -14,12 +28,12 @@
 #'                   ppt_stack = rainfall_image, etp_stack = etp_image, AWC = 100)
 #' }
 #' @export
-#' @return Returns multiple stack of output
+#' @return Returns multiple Rasterstack object as output (explained in description).
 
-waterDemand <- function(out_dir, ppt_stack, etp_stack, AWC){
+waterDemand <- function(out_dir, ppt_stack, eto_stack, AWC){
 
 ppt<-ppt_stack
-etp<-etp_stack
+etp<-eto_stack
 
 crs<-crs(ppt)
 Neg.ac <- replicate(12,(raster(nrows=nrow(ppt), ncols = ncol(ppt), xmn = extent(ppt)[1,], xmx = extent(ppt)[2,], ymn = extent(ppt)[3,], ymx = extent(ppt)[4,],
@@ -146,13 +160,13 @@ Neg.ac[ppt == -9999]<-NA
 
 
 ARM<- cbind(xy, ARM)
-ARM<-rasterFromXYZ(ARM, crs = crs, res = 0.125)
+ARM<-rasterFromXYZ(ARM, crs = crs)
 names(ARM)<- c("January", "February", "March", "April", "May", "June",
                "July", "August", "September", "October", "November", "December")
 ARM[ppt == -9999]<-NA
 
 ALT<- cbind(xy, ALT)
-ALT<-rasterFromXYZ(ALT, crs = crs, )
+ALT<-rasterFromXYZ(ALT, crs = crs)
 names(ALT)<- c("January", "February", "March", "April", "May", "June",
                "July", "August", "September", "October", "November", "December")
 ALT[ppt == -9999]<-NA
@@ -195,15 +209,15 @@ AWC_arm[ppt == -9999]<-NA
 
 setwd(out_dir)
 
-name.Neg.ac<-paste0("cal_Neg.ac_","AWC_", AWC, ".tif")
-name.ARM<-paste0("cal_ARM_","AWC_", AWC, ".tif")
-name.ALT<-paste0("cal_ALT_","AWC_", AWC, ".tif")
-name.ETR<-paste0("cal_ETR_","AWC_", AWC, ".tif")
-name.DEF<-paste0("cal_DEF_","AWC_", AWC, ".tif")
-name.EXC<-paste0("cal_EXC_","AWC_", AWC, ".tif")
-name.REP<-paste0("cal_REP_","AWC_", AWC, ".tif")
-name.RET<-paste0("cal_RET_","AWC_", AWC, ".tif")
-name.AWC_arm<-paste0("cal_AWC_arm_","AWC_", AWC, ".tif")
+name.Neg.ac<-paste0("Neg.ac_","AWC_", AWC, ".tif")
+name.ARM<-paste0("ARM_","AWC_", AWC, ".tif")
+name.ALT<-paste0("ALT_","AWC_", AWC, ".tif")
+name.ETR<-paste0("ETR_","AWC_", AWC, ".tif")
+name.DEF<-paste0("DEF_","AWC_", AWC, ".tif")
+name.EXC<-paste0("EXC_","AWC_", AWC, ".tif")
+name.REP<-paste0("REP_","AWC_", AWC, ".tif")
+name.RET<-paste0("RET_","AWC_", AWC, ".tif")
+name.AWC_arm<-paste0("AWC_arm_","AWC_", AWC, ".tif")
 writeRaster(Neg.ac ,filename = name.Neg.ac, format = "GTiff", overwrite=T)
 writeRaster(ARM ,filename = name.ARM, format = "GTiff", overwrite=T)
 writeRaster(ALT ,filename = name.ALT, format = "GTiff", overwrite=T)
