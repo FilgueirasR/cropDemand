@@ -32,8 +32,17 @@ library(raster)
 
 see_brazil_biomes()
 
-img_eto <- loadROI(variable = "eto", region = "biomes_brazil" , sub_region = 5)
-img_ppt <- loadROI(variable = "ppt", region = "biomes_brazil" , sub_region = 5)
+# dir_out = directory to save the images
+# ppt and eto should have different directories
+
+img_eto <- download_terraclimate(dir_out = "C:/eto", variable = "eto", years = c(2000:2017), region = "biomes_brazil", sub_region = 5) 
+img_ppt <- download_terraclimate(dir_out = "C:/ppt", variable = "eto", years = c(2000:2017), region = "biomes_brazil", sub_region = 5) 
+
+# if you want to calibrate the images for Brazil conditions, you can use the function eto_calibration and ppt_calibration
+
+img_eto_cal <- eto_calibration(slope = 0.930073, intercept = 22.399986, eto_stack = img_eto)
+img_ppt_cal <- ppt_calibration(slope = 0.7000972, intercept = 23.753785, ppt_stack = img_ppt)
+
 
 start_date<-c('2000-01-01')
 end_date<-c('2017-12-01')
