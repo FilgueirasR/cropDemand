@@ -1,7 +1,7 @@
 # cropDemand
 
 <div class="fluid-row" id="header">
-    <img src='https://lh5.googleusercontent.com/e4jYKURwni1-Sb9gwgfKP8un8HsZpdC6YmiTLoFMvdv6zh9CKpZYPcwEN_1O7I2iQ7ilm3iY76lEfSARhqH4kDjnC_NITEqJ-tzk146oCkvJN1ZlqC2G=w1280' height='150' width='auto' align='right'>
+    <img src='man/figures/logo_cropDemand.png' height='150' width='auto' align='right'>
 
 
 <!-- badges: start -->
@@ -30,18 +30,27 @@ This is a basic example which shows you how to run the cropDemand package:
 library(cropDemand)
 library(raster)
 
-see_brazil_states()
+see_brazil_biomes()
 
-image_ppt<-loadROI(variable = "ppt", region = "brazil", sub_region = 10) # sub_region = Maranhão
-image_etp<-loadROI(variable = "etp", region = "brazil", sub_region = 10) # sub_region = Maranhão
+# dir_out = directory to save the images
+# ppt and eto should have different directories
+
+img_eto <- download_terraclimate(dir_out = "C:/eto", variable = "eto", years = c(2000:2017), region = "biomes_brazil", sub_region = 5) 
+img_ppt <- download_terraclimate(dir_out = "C:/ppt", variable = "eto", years = c(2000:2017), region = "biomes_brazil", sub_region = 5) 
+
+# if you want to calibrate the images for Brazil conditions, you can use the function eto_calibration and ppt_calibration
+
+img_eto_cal <- eto_calibration(slope = 0.930073, intercept = 22.399986, eto_stack = img_eto)
+img_ppt_cal <- ppt_calibration(slope = 0.7000972, intercept = 23.753785, ppt_stack = img_ppt)
+
 
 start_date<-c('2000-01-01')
 end_date<-c('2017-12-01')
 
 monthly_ppt <- cropDemand::monthly_stack(stack = image_ppt, start_date = start_date, end_date = end_date)
-monthly_etp <- cropDemand::monthly_stack(stack = image_etp, start_date = start_date, end_date = end_date)
+monthly_eto <- cropDemand::monthly_stack(stack = image_eto, start_date = start_date, end_date = end_date)
 
-cd<-waterDemand(out_dir = "C:/Users/betof/Desktop/teste_WD", ppt_stack = monthly_ppt , etp_stack = monthly_etp, AWC = 100)
+cd<-waterDemand(out_dir = "C:/Users/betof/Desktop/teste_WD", ppt_stack = monthly_ppt , eto_stack = monthly_eto, AWC = 100)
 
 cropDemand::plot_AWC(cd)
 
