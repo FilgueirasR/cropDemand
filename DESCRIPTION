@@ -28,7 +28,6 @@ Depends:
 Imports:
     dplyr(>= 0.3.0.1), 
     ggplot2(>= 3.3.2),
-    extrafont, 
     raster,
     rgdal,
     tidyr,
