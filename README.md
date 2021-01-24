@@ -30,18 +30,18 @@ This is a basic example which shows you how to run the cropDemand package:
 library(cropDemand)
 library(raster)
 
-see_brazil_states()
+see_brazil_biomes()
 
-image_ppt<-loadROI(variable = "ppt", region = "brazil", sub_region = 10) # sub_region = Maranhão
-image_etp<-loadROI(variable = "etp", region = "brazil", sub_region = 10) # sub_region = Maranhão
+img_eto <- loadROI(variable = "eto", region = "biomes_brazil" , sub_region = 5)
+img_ppt <- loadROI(variable = "ppt", region = "biomes_brazil" , sub_region = 5)
 
 start_date<-c('2000-01-01')
 end_date<-c('2017-12-01')
 
 monthly_ppt <- cropDemand::monthly_stack(stack = image_ppt, start_date = start_date, end_date = end_date)
-monthly_etp <- cropDemand::monthly_stack(stack = image_etp, start_date = start_date, end_date = end_date)
+monthly_eto <- cropDemand::monthly_stack(stack = image_eto, start_date = start_date, end_date = end_date)
 
-cd<-waterDemand(out_dir = "C:/Users/betof/Desktop/teste_WD", ppt_stack = monthly_ppt , etp_stack = monthly_etp, AWC = 100)
+cd<-waterDemand(out_dir = "C:/Users/betof/Desktop/teste_WD", ppt_stack = monthly_ppt , eto_stack = monthly_eto, AWC = 100)
 
 cropDemand::plot_AWC(cd)
 
