@@ -37,6 +37,6 @@ The output water balance parameters for this function are:
 \examples{
 \dontrun{
 cwd<- waterDemand(out_dir = "G:/My computer/test/CropWaterDemand",
-                  ppt_stack = rainfall_image, etp_stack = etp_image, AWC = 100)
+                  ppt_stack = rainfall_image, eto_stack = eto_image, AWC = 100)
 }
 }
