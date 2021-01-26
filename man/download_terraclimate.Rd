@@ -19,7 +19,7 @@ download_terraclimate(dir_out, variable, years, region, sub_region)
 \item{sub_region}{You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes.}
 }
 \value{
-Load the ppt (Rainfall) or eto (reference evapotranspiration) rasterstack
+Download for the region of interest the ppt (Rainfall) or eto (reference evapotranspiration) rasterstack
 }
 \description{
 This function will download the eto and ppt and will load a rasterstack according to the the region of interest (Region and sub_region).

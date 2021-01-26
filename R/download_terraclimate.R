@@ -10,6 +10,7 @@
 #' @import raster
 #' @import rgdal
 #' @import ncdf4
+#' @importFrom utils capture.output
 #' @examples
 #' \dontrun{
 #'
