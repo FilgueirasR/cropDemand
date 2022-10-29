@@ -1,5 +1,4 @@
 #' Function to see the Brazilian states available to use in download.terraclimate and loadROI function
-#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This function will show the Brazilian state available in the package and how we can call each state polygon.
 #' @examples

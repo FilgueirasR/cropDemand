@@ -1,5 +1,4 @@
 #' Function to generate the  water demand based in available water capacity of the soil
-#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This function will calculate the water balance parameters based in the available water capacity informed (AWC).
 #' The output water balance parameters for this function are:

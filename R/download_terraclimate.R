@@ -1,5 +1,4 @@
 #' Download of reference evapotranspiration (eto) and rainfall (ppt) from 'TerraClimate'
-#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This function will download the eto and ppt and will load a rasterstack according to the the region of interest (Region and sub_region).
 #' @param dir_out Directory where you want to save the raster images that you are goind to download.
