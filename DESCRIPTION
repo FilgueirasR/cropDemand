@@ -1,7 +1,7 @@
 Package: cropDemand
 Type: Package
 Title: Spatial Crop Water Demand for Brazil
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(person(given = "Roberto",
                     family = "Filgueiras",
                     role = c("aut","cre"),
@@ -19,10 +19,10 @@ Authors@R: c(person(given = "Roberto",
                     family = "da Cunha",
                     role = ("aut"),
                     comment = c(ORCID = "0000-0002-1671-1021")))
-Description: Estimation of crop water demand can be processed via this package. As example, the data  from 'TerraClimate' dataset (<http://www.climatologylab.org/terraclimate.html>) calibrated with automatic weather stations of National Meteorological Institute of Brazil is available in a coarse spatial resolution to do the crop water demand. However, the user have also the option to download the variables directly from 'TerraClimate' repository with the download.terraclimate function  and access the original 'TerraClimate' products. If the user believes that is necessary calibrate the variables, there is another function to do it. Lastly, the estimation of the crop water demand present in this package can be run for all the Brazilian territory with 'TerraClimate' dataset. 
+Description: Estimation of crop water demand can be processed via this package. As example, the data  from 'TerraClimate' dataset (<https://www.climatologylab.org/terraclimate.html>) calibrated with automatic weather stations of National Meteorological Institute of Brazil is available in a coarse spatial resolution to do the crop water demand. However, the user have also the option to download the variables directly from 'TerraClimate' repository with the download.terraclimate function  and access the original 'TerraClimate' products. If the user believes that is necessary calibrate the variables, there is another function to do it. Lastly, the estimation of the crop water demand present in this package can be run for all the Brazilian territory with 'TerraClimate' dataset. 
 License: CC BY 4.0
 Encoding: UTF-8
-LazyData: true
+Language: en-US
 Depends: 
     R (>= 3.2.0),
 Imports:

@@ -1,3 +1,15 @@
+## Release version 1.0.2
+
+## Release summary
+
+Fixed html bugs reported by CRAN.
+
+## R CMD check results
+
+0 errors | 0 warnings | 0 note
+
+
+
 # Release version 1.0.1
 
 ## Release summary
