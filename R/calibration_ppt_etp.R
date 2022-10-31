@@ -1,5 +1,4 @@
 #' Calibration of rainfall (ppt) of 'TerraClimate'
-#' \if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}
 #'
 #' @description This fuction will calibrate the rainfall (ppt) from TerraClimate dataset based in the relationship with observed weather stations data.
 #' @param ppt_stack stack of ppt.
