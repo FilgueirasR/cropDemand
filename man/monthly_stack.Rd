@@ -2,8 +2,7 @@
 % Please edit documentation in R/monthly_stack.R
 \name{monthly_stack}
 \alias{monthly_stack}
-\title{Function to calculate the mean monthly rainfall/reference evapotranspiration to generate the crop water demand
-\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
+\title{Function to calculate the mean monthly rainfall/reference evapotranspiration to generate the crop water demand}
 \usage{
 monthly_stack(stack, start_date, end_date)
 }

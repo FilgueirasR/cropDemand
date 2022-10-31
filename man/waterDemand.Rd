@@ -2,8 +2,7 @@
 % Please edit documentation in R/WaterDemand.R
 \name{waterDemand}
 \alias{waterDemand}
-\title{Function to generate the  water demand based in available water capacity of the soil
-\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
+\title{Function to generate the  water demand based in available water capacity of the soil}
 \usage{
 waterDemand(out_dir, ppt_stack, eto_stack, AWC)
 }

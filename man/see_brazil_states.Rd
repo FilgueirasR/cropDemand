@@ -2,8 +2,7 @@
 % Please edit documentation in R/see_brazil_states.R
 \name{see_brazil_states}
 \alias{see_brazil_states}
-\title{Function to see the Brazilian states available to use in download.terraclimate and loadROI function
-\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
+\title{Function to see the Brazilian states available to use in download.terraclimate and loadROI function}
 \usage{
 see_brazil_states()
 }

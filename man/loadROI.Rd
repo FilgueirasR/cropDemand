@@ -2,8 +2,7 @@
 % Please edit documentation in R/LoadROI.R
 \name{loadROI}
 \alias{loadROI}
-\title{Load image data to do crop water demand
-\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
+\title{Load image data to do crop water demand}
 \usage{
 loadROI(variable, region, sub_region)
 }

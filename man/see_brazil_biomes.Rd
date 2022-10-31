@@ -2,8 +2,7 @@
 % Please edit documentation in R/see_brazil_biomes.R
 \name{see_brazil_biomes}
 \alias{see_brazil_biomes}
-\title{Function to see the Brazilian biomes available tp use in download.terraclimate and loadROI function
-\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
+\title{Function to see the Brazilian biomes available tp use in download.terraclimate and loadROI function}
 \usage{
 see_brazil_biomes()
 }

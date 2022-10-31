@@ -2,8 +2,7 @@
 % Please edit documentation in R/plot_AWC.R
 \name{plot_AWC}
 \alias{plot_AWC}
-\title{Function to plot the percentage of Available Water Capacity (AWC)
-\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
+\title{Function to plot the percentage of Available Water Capacity (AWC)}
 \usage{
 plot_AWC(AWC_stack)
 }

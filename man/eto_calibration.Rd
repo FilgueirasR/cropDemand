@@ -2,8 +2,7 @@
 % Please edit documentation in R/calibration_ppt_etp.R
 \name{eto_calibration}
 \alias{eto_calibration}
-\title{Calibration of reference evapotranspiration (eto) of 'TerraClimate'
-\if{html}{\figure{logo_cropDemand.png}{options: height= 300 width=auto style = float:right alt= Our logo}}}
+\title{Calibration of reference evapotranspiration (eto) of 'TerraClimate'}
 \usage{
 eto_calibration(slope, intercept, eto_stack)
 }
