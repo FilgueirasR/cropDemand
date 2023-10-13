@@ -1,6 +1,6 @@
 #' Function to see the Brazilian biomes available tp use in download.terraclimate and loadROI function
 #'
-#' @description This fuction will show the biomes available in the package and how we can call each biome polygon.
+#' @description This function will show the biomes available in the package and how we can call each biome polygon.
 #' @examples
 #' \dontrun{
 #' see_brazil_biomes()

@@ -1,3 +1,7 @@
+# cropDemand 1.0.3
+
+R-spatial evolution: retirement of rgdal, rgeos and maptools upgrade.
+
 #cropDemand 1.0.2
 
 ## html bugs fix - reported by CRAN
