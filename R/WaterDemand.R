@@ -27,7 +27,7 @@
 #'                   ppt_stack = rainfall_image, eto_stack = eto_image, AWC = 100)
 #' }
 #' @export
-#' @return Returns multiple Rasterstack object as output (explained in description).
+#' @return Returns multiple SpatRaster object as output (explained in description).
 
 
 waterDemand <- function(out_dir, ppt_stack, eto_stack, AWC){

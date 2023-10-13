@@ -7,14 +7,14 @@
 monthly_stack(stack, start_date, end_date)
 }
 \arguments{
-\item{stack}{Stack of mean rainfall/reference evapotranspiration Rasterstack}
+\item{stack}{Stack of mean rainfall/reference evapotranspiration SpatRaster}
 
 \item{start_date}{Date that start the investigation, should be in the following format (2000-01-01 /Year-Month-Day)}
 
 \item{end_date}{Date that end the investigation, should be in the following format (2017-12-31 /Year-Month-Day)}
 }
 \value{
-Returns a stack with a monthly mean air temperature from a period of time
+Returns a SpatRaster with a monthly mean air temperature from a period of time
 }
 \description{
 This function will calculate the mean monthly air temperature based on the period of time selected (start_date and end_date).

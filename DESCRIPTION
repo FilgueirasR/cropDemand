@@ -1,7 +1,7 @@
 Package: cropDemand
 Type: Package
 Title: Spatial Crop Water Demand for Brazil
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(person(given = "Roberto",
                     family = "Filgueiras",
                     role = c("aut","cre"),
@@ -28,8 +28,8 @@ Depends:
 Imports:
     dplyr(>= 0.3.0.1), 
     ggplot2(>= 3.3.2),
-    raster,
-    rgdal,
+    terra,
+    sf,
     tidyr,
     ncdf4
 BugReports: https://github.com/FilgueirasR/cropDemand/issues

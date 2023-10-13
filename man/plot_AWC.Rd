@@ -7,7 +7,7 @@
 plot_AWC(AWC_stack)
 }
 \arguments{
-\item{AWC_stack}{A stack generated in WaterDemand function}
+\item{AWC_stack}{A SpatRaster generated in WaterDemand function}
 }
 \value{
 Returns a  plot (gg file) of monthly percentage of AWC
