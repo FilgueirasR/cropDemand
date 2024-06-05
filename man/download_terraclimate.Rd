@@ -29,7 +29,8 @@ This function will download the eto and ppt and will load a SpatRaster according
 ### Downloading eto based on Brazil states.
 see_brazil_states()
 
-img<-download_terraclimate(variable = "eto",
+img<-download_terraclimate(dir_out,
+                          variable = "eto",
                           years = c(2018:2019),
                           region = "brazil",
                           sub_region = 13)
@@ -37,7 +38,8 @@ img<-download_terraclimate(variable = "eto",
 ### Downloading the ppt based on Brazil biomes.
 see_brazil_biomes()
 
-img<-download_terraclimate(variable = "ppt",
+img<-download_terraclimate(dir_out,
+                          variable = "ppt",
                           years = c(2018:2019),
                           region = "biomes_brazil",
                           sub_region = 6)
