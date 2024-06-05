@@ -1,3 +1,9 @@
+# Release version 1.0.3
+
+## Release summary
+
+R-spatial evolution: retirement of rgdal, rgeos and maptools update
+
 ## Release version 1.0.2
 
 ## Release summary

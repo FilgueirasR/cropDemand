@@ -14,7 +14,7 @@ eto_calibration(slope, intercept, eto_stack)
 \item{eto_stack}{stack of eto.}
 }
 \value{
-Returns a Rasterstack of eto calibrated.
+Returns a SpatRaster of eto calibrated.
 }
 \description{
 This function will calibrate the reference evapotranspiration (eto) from TerraClimate dataset based in the relationship with observed weather stations data.

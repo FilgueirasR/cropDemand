@@ -7,14 +7,14 @@
 loadROI(variable, region, sub_region)
 }
 \arguments{
-\item{variable}{Stack of evapotranspiration or rainfall (Rasterstack).}
+\item{variable}{Stack of evapotranspiration or rainfall (SpatRaster).}
 
-\item{region}{Use the "brazil" shp file to extract the rasterstack (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the Rasterstack (variable) for one biome of Brazil.}
+\item{region}{Use the "brazil" shp file to extract the SpatRaster (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the SpatRaster (variable) for one biome of Brazil.}
 
 \item{sub_region}{You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes-brazil (in region parameter) you must choice one of Brazilian biomes.}
 }
 \value{
-Load the reference evapotranspiration (eto) or rainfall (ppt) rasterstack
+Load the reference evapotranspiration (eto) or rainfall (ppt) SpatRaster
 }
 \description{
 This fuction will load the evapotranspiration and rainfall data for the region of interest (ROI).

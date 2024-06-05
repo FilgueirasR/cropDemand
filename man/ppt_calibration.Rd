@@ -14,7 +14,7 @@ ppt_calibration(slope, intercept, ppt_stack)
 \item{ppt_stack}{stack of ppt.}
 }
 \value{
-Returns a Rasterstack of ppt calibrated.
+Returns a SpatRaster of ppt calibrated.
 }
 \description{
 This fuction will calibrate the rainfall (ppt) from TerraClimate dataset based in the relationship with observed weather stations data.

@@ -9,19 +9,19 @@ download_terraclimate(dir_out, variable, years, region, sub_region)
 \arguments{
 \item{dir_out}{Directory where you want to save the raster images that you are goind to download.}
 
-\item{variable}{Variable to download. This function will download the eto or ppt (Rasterstack).}
+\item{variable}{Variable to download. This function will download the eto or ppt (SpatRaster).}
 
 \item{years}{The period in years that the function should download images.}
 
-\item{region}{Use the "brazil" shapefile to extract the Rasterstack (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the Rasterstack (variable) for one biome of Brazil.}
+\item{region}{Use the "brazil" shapefile to extract the SpatRaster (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the SpatRaster (variable) for one biome of Brazil.}
 
 \item{sub_region}{You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes.}
 }
 \value{
-Download for the region of interest the ppt (Rainfall) or eto (reference evapotranspiration) rasterstack
+Download for the region of interest the ppt (Rainfall) or eto (reference evapotranspiration) SpatRaster
 }
 \description{
-This function will download the eto and ppt and will load a rasterstack according to the the region of interest (Region and sub_region).
+This function will download the eto and ppt and will load a SpatRaster according to the the region of interest (Region and sub_region).
 }
 \examples{
 \dontrun{
@@ -29,7 +29,8 @@ This function will download the eto and ppt and will load a rasterstack accordin
 ### Downloading eto based on Brazil states.
 see_brazil_states()
 
-img<-download_terraclimate(variable = "eto",
+img<-download_terraclimate(dir_out,
+                          variable = "eto",
                           years = c(2018:2019),
                           region = "brazil",
                           sub_region = 13)
@@ -37,7 +38,8 @@ img<-download_terraclimate(variable = "eto",
 ### Downloading the ppt based on Brazil biomes.
 see_brazil_biomes()
 
-img<-download_terraclimate(variable = "ppt",
+img<-download_terraclimate(dir_out,
+                          variable = "ppt",
                           years = c(2018:2019),
                           region = "biomes_brazil",
                           sub_region = 6)

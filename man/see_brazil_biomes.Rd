@@ -10,7 +10,7 @@ see_brazil_biomes()
 The biomes information available to run the cropDemand package.
 }
 \description{
-This fuction will show the biomes available in the package and how we can call each biome polygon.
+This function will show the biomes available in the package and how we can call each biome polygon.
 }
 \examples{
 \dontrun{

@@ -16,7 +16,7 @@ waterDemand(out_dir, ppt_stack, eto_stack, AWC)
 \item{AWC}{The available water capacity (AWC) that the function will use in the calculations. The AWC value must be chosen according to the crop (root system depth) you want to obtain the water balance.}
 }
 \value{
-Returns multiple Rasterstack object as output (explained in description).
+Returns multiple SpatRaster object as output (explained in description).
 }
 \description{
 This function will calculate the water balance parameters based in the available water capacity informed (AWC).

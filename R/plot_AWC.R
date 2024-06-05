@@ -1,10 +1,25 @@
 #' Function to plot the percentage of Available Water Capacity (AWC)
 #'
 #' @description This function will plot the monthly AWC
-#' @import ggplot2
-#' @importFrom tidyr gather
-#' @importFrom stats na.omit
-#' @param AWC_stack A stack generated in WaterDemand function
+#' @importFrom ggplot2
+#'   ggplot
+#'   aes
+#'   geom_raster
+#'   coord_fixed
+#'   scale_fill_gradient
+#'   theme
+#'   facet_wrap
+#'   guides
+#'   guide_legend
+#'   element_text
+#'   element_blank
+#'   labs
+#'   unit
+#' @importFrom tidyr
+#'   gather
+#' @importFrom terra
+#'   na.omit
+#' @param AWC_stack A SpatRaster generated in WaterDemand function
 #' @examples
 #' \dontrun{
 #' plot_AWC(AWC_stack)
@@ -19,11 +34,11 @@ plot_AWC<-function(AWC_stack){
 
 names(AWC_stack)<-c( "January", "February", "March", "April", "May", "June",
                       "July", "August", "September", "October", "November", "December")
-  df <- as.data.frame(rasterToPoints(AWC_stack))
+  df <- as.data.frame(terra::as.data.frame(AWC_stack, xy = T))
   levels(df)
   names(df)
 
-  df<-na.omit(gather(df, "Months", "AWC", 3:14))
+  df<-terra::na.omit(tidyr::gather(df, "Months", "AWC", 3:14))
   Name.months<-c( "January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December")
 
@@ -32,9 +47,9 @@ names(AWC_stack)<-c( "January", "February", "March", "April", "May", "June",
   legend_title <- "AWC (%)"
   max<-100
   min<-0
-  ggplot(data=df, aes(y = y, x = x)) +
-    geom_raster(aes(fill= AWC))+
-    coord_fixed(xlim = c(extent(AWC_stack)[1], extent(AWC_stack)[2]))+
+  ggplot(data=df, aes(y = df$y, x = df$x)) +
+    geom_raster(aes(fill= df$AWC))+
+    coord_fixed(xlim = c(terra::ext(AWC_stack)[1], terra::ext(AWC_stack)[2]))+
     scale_fill_gradient(legend_title, low ="yellow", high = "blue", na.value = "transparent", limits=c(min, max))+
     theme(axis.title.x = element_blank(),
           axis.title.y = element_blank(),
@@ -50,5 +65,4 @@ names(AWC_stack)<-c( "January", "February", "March", "April", "May", "June",
           legend.title = element_text(size = 14))+
     labs(fill = "AWC (%):")
 }
-
 
