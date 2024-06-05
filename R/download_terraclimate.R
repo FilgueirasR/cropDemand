@@ -16,7 +16,8 @@
 #' ### Downloading eto based on Brazil states.
 #' see_brazil_states()
 #'
-#' img<-download_terraclimate(variable = "eto",
+#' img<-download_terraclimate(dir_out,
+#'                           variable = "eto",
 #'                           years = c(2018:2019),
 #'                           region = "brazil",
 #'                           sub_region = 13)
@@ -24,7 +25,8 @@
 #' ### Downloading the ppt based on Brazil biomes.
 #' see_brazil_biomes()
 #'
-#' img<-download_terraclimate(variable = "ppt",
+#' img<-download_terraclimate(dir_out,
+#'                           variable = "ppt",
 #'                           years = c(2018:2019),
 #'                           region = "biomes_brazil",
 #'                           sub_region = 6)
@@ -47,7 +49,12 @@ download_terraclimate <- function(dir_out, variable, years, region, sub_region){
       img <- terra::rast(list.files(dir_out, pattern = name_img, full.names = T))
       shp_path <- system.file("extdata", paste0(region, ".shp"), package = "cropDemand")
       invisible(capture.output(shp <- sf::st_read(shp_path)))
-      area <- shp[sub_region, ]
+
+      if(sub_region == "all"){
+        area<- shp}else{
+        area <- shp[sub_region, ]
+        }
+
       area <- terra::vect(area)
       img <- terra::crop(img, area)
       img <- terra::mask(img, area)
