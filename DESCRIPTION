@@ -33,4 +33,4 @@ Imports:
     tidyr,
     ncdf4
 BugReports: https://github.com/FilgueirasR/cropDemand/issues
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.1
