@@ -4,7 +4,7 @@
 #' @param dir_out Directory where you want to save the raster images that you are goind to download.
 #' @param variable Variable to download. This function will download the eto or ppt (SpatRaster).
 #' @param region Use the "brazil" shapefile to extract the SpatRaster (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the SpatRaster (variable) for one biome of Brazil.
-#' @param sub_region You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes.
+#' @param sub_region You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes. Another option is to select "all" to download images for the entire territory of Brazil.
 #' @param years The period in years that the function should download images.
 #' @import terra
 #' @import sf

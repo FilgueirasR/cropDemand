@@ -15,7 +15,7 @@ download_terraclimate(dir_out, variable, years, region, sub_region)
 
 \item{region}{Use the "brazil" shapefile to extract the SpatRaster (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the SpatRaster (variable) for one biome of Brazil.}
 
-\item{sub_region}{You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes.}
+\item{sub_region}{You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes. Another option is to select "all" to download images for the entire territory of Brazil.}
 }
 \value{
 Download for the region of interest the ppt (Rainfall) or eto (reference evapotranspiration) SpatRaster
