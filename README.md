@@ -1,3 +1,6 @@
+![CRAN Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/cropDemand)
+![CRAN Download Badge](https://cranlogs.r-pkg.org/badges/cropDemand)
+
 # cropDemand
 
 <div class="fluid-row" id="header">
