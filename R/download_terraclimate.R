@@ -1,7 +1,7 @@
 #' Download of reference evapotranspiration (eto) and rainfall (ppt) from 'TerraClimate'
 #'
 #' @description This function will download the eto and ppt and will load a SpatRaster according to the the region of interest (Region and sub_region).
-#' @param dir_out Directory where you want to save the raster images that you are goind to download.
+#' @param dir_out Directory where you want to save the raster images that you are goind to download. Each variable should be locate in one folder.
 #' @param variable Variable to download. This function will download the eto or ppt (SpatRaster).
 #' @param region Use the "brazil" shapefile to extract the SpatRaster (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the SpatRaster (variable) for one biome of Brazil.
 #' @param sub_region You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes. Another option is to select "all" to download images for the entire territory of Brazil.
@@ -16,7 +16,7 @@
 #' ### Downloading eto based on Brazil states.
 #' see_brazil_states()
 #'
-#' img<-download_terraclimate(dir_out,
+#' img<-download_terraclimate(dir_out = C:/teste/eto",
 #'                           variable = "eto",
 #'                           years = c(2018:2019),
 #'                           region = "brazil",
@@ -25,7 +25,7 @@
 #' ### Downloading the ppt based on Brazil biomes.
 #' see_brazil_biomes()
 #'
-#' img<-download_terraclimate(dir_out,
+#' img<-download_terraclimate(dir_out = "C:/teste/ppt",
 #'                           variable = "ppt",
 #'                           years = c(2018:2019),
 #'                           region = "biomes_brazil",
