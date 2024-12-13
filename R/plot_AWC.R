@@ -47,8 +47,8 @@ names(AWC_stack)<-c( "January", "February", "March", "April", "May", "June",
   legend_title <- "AWC (%)"
   max<-100
   min<-0
-  ggplot(data=df, aes(y = df$y, x = df$x)) +
-    geom_raster(aes(fill= df$AWC))+
+  ggplot(data=df, aes(y = y, x = x)) +
+    geom_raster(aes(fill= AWC))+
     coord_fixed(xlim = c(terra::ext(AWC_stack)[1], terra::ext(AWC_stack)[2]))+
     scale_fill_gradient(legend_title, low ="yellow", high = "blue", na.value = "transparent", limits=c(min, max))+
     theme(axis.title.x = element_blank(),
