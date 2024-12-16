@@ -7,7 +7,7 @@
 download_terraclimate(dir_out, variable, years, region, sub_region)
 }
 \arguments{
-\item{dir_out}{Directory where you want to save the raster images that you are goind to download.}
+\item{dir_out}{Directory where you want to save the raster images that you are goind to download. Each variable should be locate in one folder.}
 
 \item{variable}{Variable to download. This function will download the eto or ppt (SpatRaster).}
 
@@ -15,35 +15,13 @@ download_terraclimate(dir_out, variable, years, region, sub_region)
 
 \item{region}{Use the "brazil" shapefile to extract the SpatRaster (variable) for one state (Brazilian state), or use the "biomes_brazil" to extract the SpatRaster (variable) for one biome of Brazil.}
 
-\item{sub_region}{You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes.}
+\item{sub_region}{You have two options in this section, if you choice the brazil (in region parameter) you need to choice the Brazilian states, but if you choice the biomes_brazil (in region parameter) you must choice one of Brazilian biomes. Another option is to select "all" to download images for the entire territory of Brazil.}
 }
 \value{
 Download for the region of interest the ppt (Rainfall) or eto (reference evapotranspiration) SpatRaster
 }
 \description{
 This function will download the eto and ppt and will load a SpatRaster according to the the region of interest (Region and sub_region).
-}
-\examples{
-\dontrun{
-
-### Downloading eto based on Brazil states.
-see_brazil_states()
-
-img<-download_terraclimate(dir_out,
-                          variable = "eto",
-                          years = c(2018:2019),
-                          region = "brazil",
-                          sub_region = 13)
-
-### Downloading the ppt based on Brazil biomes.
-see_brazil_biomes()
-
-img<-download_terraclimate(dir_out,
-                          variable = "ppt",
-                          years = c(2018:2019),
-                          region = "biomes_brazil",
-                          sub_region = 6)
-}
 }
 \references{
 The images used in this package can be found in the paper: Abatzoglou, J.T., S.Z. Dobrowski, S.A. Parks, K.C. Hegewisch, 2018, Terraclimate, a high-resolution global dataset of monthly climate and climatic water balance from 1958-2015, Scientific Data.
