@@ -8,6 +8,7 @@
 
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/FilgueirasR/cropDemand/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/FilgueirasR/cropDemand/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of cropDemand is to make a crop water balance based on Thornwaite Matter (1955),  with possibility to change the available water capacity value according to different crops, for any region of Brazil. The cropDemand package uses the Terraclimate dataset (http://www.climatologylab.org/terraclimate.html) calibrated with the automatic weather stations of National Meteorological Institute of Brazil (INMET).
